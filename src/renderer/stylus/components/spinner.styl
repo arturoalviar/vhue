@@ -1,0 +1,33 @@
+.vh-spinner-wrapper
+  width: 32px
+  height: @width
+  animation: vh-spinner-wrapper-anime 2s linear infinite
+
+.vh-spinner
+  stroke: var(--color-primary)
+  animation: vh-spinner-anime 2s ease-in-out infinite
+  &.is-light
+    stroke: #FFFFFF
+
+@keyframes vh-spinner-wrapper-anime {
+  to {
+    transform: rotate(270deg)
+  }
+}
+
+@keyframes vh-spinner-anime {
+  0% {
+    stroke-dasharray: 1,125
+    stroke-dashoffset: 0px
+  }
+
+  50% {
+    stroke-dasharray: 125,125
+    stroke-dashoffset: -65px
+  }
+
+  to {
+    stroke-dasharray: 125,125
+    stroke-dashoffset: -125px
+  }
+}

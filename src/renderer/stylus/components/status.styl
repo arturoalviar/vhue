@@ -1,0 +1,27 @@
+@import '../utils/*'
+.online-status
+  position: absolute
+  bottom: remCalc(32)
+  left: remCalc(25)
+  width: 100%
+  .status
+    font-size: remCalc(20)
+    font-weight: bold
+    padding-left: remCalc(30)
+    text-transform: lowercase
+.status-indicator
+  border-radius: 50%
+  display: block
+  position: absolute
+  top: 50%
+  left: 0
+  width: remCalc(16)
+  height: @width
+  transform: translateY(-50%)
+.online-status
+  &.is-online .status-indicator
+    background-color: var(--color-success)
+    box-shadow: hsla(colors.success, .65) 0px 2px 8px
+  &.is-offline .status-indicator
+    background-color: var(--color-danger)
+    box-shadow: hsla(colors.danger, .65) 0px 2px 8px

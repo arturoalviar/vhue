@@ -1,0 +1,12 @@
+@import '../utils/*'
+
+.vh-group-lights
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+  grid-gap: spacing.lg
+  margin-top: spacing.lg
+  width: 100%
+  +minMedia(md)
+    grid-template-columns: repeat(3, 1fr)
+  +minMedia(lg)
+    grid-template-columns: repeat(4, 1fr)

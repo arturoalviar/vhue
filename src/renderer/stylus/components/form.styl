@@ -1,0 +1,56 @@
+@import '../utils/*'
+
+
+.vh-item-form-wrapper
+  max-width: remCalc(540)
+  width: 100%
+
+.vh-item-form-block
+  display: flex
+  align-items: flex-end
+  justify-content: space-between
+  margin-bottom: spacing.md
+
+.vh-item-form-info
+  flex: 1
+  label
+    display: block
+    font-size: remCalc(14)
+    line-height: 1
+    margin-bottom: remCalc(12)
+    +minMedia(lg)
+      font-size: remCalc(18)
+      margin-bottom: remCalc(18)
+  input
+    display: inline-flex
+    max-width: 100%
+    margin-bottom: 0
+
+.vh-item-form-control
+  margin-left: spacing.lg
+
+.vh-item-form-title
+  position: relative
+  h2
+    padding-left: remCalc(50)
+  svg
+    position: absolute
+    top: 0
+    left: 0
+    width: remCalc(40)
+    height: @width
+    fill: var(--color-text)
+
+.vh-item-form-panel
+  background: var(--color-card)
+  border-radius: .75rem
+  padding: spacing.lg
+  margin-bottom: spacing.md
+  width: 100%
+  p:last-child
+    margin-bottom: 0
+
+
++lightMode()
+  .vh-item-form-panel
+    box-shadow: shadows.formItem

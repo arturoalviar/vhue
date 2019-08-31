@@ -1,0 +1,55 @@
+@import '../utils/*'
+
+nav
+  margin-top: remCalc(28)
+  a
+    color: inherit
+ul
+  display: flex
+  flex-flow: column
+  list-style: none
+  padding: 0
+  margin: 0
+  li
+    color: var(--color-heading)
+    font-size: remCalc(16)
+    font-weight: 400
+    line-height: 2
+    position: relative
+    transition: all .3s ease-in-out
+    +minMedia(lg)
+      font-size: remCalc(22)
+    svg
+      fill: var(--color-heading)
+      position: absolute
+      top: 50%
+      left: remCalc(25)
+      width: 20px
+      height: @width
+      transform: translateY(-50%)
+      transition: fill .3s ease-in-out
+    a
+      display: block
+      padding: 1rem remCalc(50)
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 5px
+      height: 100%
+      transition: background .3s ease-in-out
+    &:hover
+      color: var(--color-primary)
+      svg
+        fill: var(--color-primary)
+      &:after
+        background: var(--color-primary)
+    &.is-current-link
+      background: var(--color-bg)
+      color: var(--color-primary)
+      svg
+        fill: var(--color-primary)
+      &:after
+        background: var(--color-primary)

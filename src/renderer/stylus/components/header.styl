@@ -1,0 +1,29 @@
+@import '../utils/*'
+
+aside
+  background: var(--color-card)
+  display: flex
+  flex-flow: column
+  position: fixed
+  top: 0
+  left: 0
+  padding-top: 3rem
+  padding-bottom: @padding-top
+  height: 100vh
+  width: nav.width
+  overflow: hidden
+  opacity: 1
+  transform: translateX(0)
+  transition: transform .3s ease-in
+  z-index: 1000
+  a
+    color: inherit
+  h1
+    font-size: remCalc(32)
+    line-height: 1
+    padding-left: remCalc(32)
+    margin: 0
+    text-transform: lowercase
+  &.is-hidden
+    opacity: 0
+    transform: translateX(-100%)

@@ -1,0 +1,30 @@
+@import 'breakpoints.styl'
+
+lightMode()
+  body.is-light
+    {block}
+
+darkMode()
+  body.is-dark
+    {block}
+
+remCalc($value, $base = 16)
+  return ($value/$base)rem
+
+minMedia(min)
+  if min in breakpoints and breakpoints[min]
+    @media all and (min-width: breakpoints[min])
+      {block}
+  else if min is a 'unit'
+    @media all and (min-width: min)
+      {block}
+  else
+    {block}
+
+maxMedia(max)
+  if max in breakpoints
+    @media all and (max-width: breakpoints[max])
+      {block}
+  else
+    @media all and (max-width: max)
+      {block}

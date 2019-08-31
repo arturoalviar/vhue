@@ -1,0 +1,25 @@
+.flash-message-wrapper
+  display: flex
+  align-items: center
+  justify-content: center
+  position: absolute
+  top: 0
+  left: 200px
+  padding: 10px 20px
+  text-align: center
+  transition: all .3s ease-in-out
+  transform: scaleY(0)
+  transform-origin: top
+  height: 50px
+  width: calc(100% - 200px)
+  &.is-visible
+    transform: scaleY(1)
+  &.is-success
+    background: var(--color-success)
+  &.is-error
+    background: var(--color-danger)
+  .flash-message
+    font-size: .75rem
+    font-weight: 600
+    line-height: 1.2
+    margin: 0

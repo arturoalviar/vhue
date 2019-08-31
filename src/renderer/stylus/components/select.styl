@@ -1,0 +1,48 @@
+@import '../utils/*'
+
+.vh-select
+  position: relative
+  select
+    border-radius: 4px
+    padding-left: spacing.md
+    padding-right: spacing.lg
+    font-family: 'Montserrat', sans-serif
+    font-size: remCalc(16)
+    height: select.height
+    vertical-align: middle
+    display: inline-block
+    min-width: remCalc(320)
+    max-width: 100%
+    width: 100%
+    border: 0 none
+    position: relative
+    background: var(--color-card)
+    color: var(--color-text)
+    border: 1px solid transparent
+    transition: .3s ease-in-out
+    transition-property: color, border
+    -webkit-appearance: none
+    &:focus
+      outline: none
+      border-color: var(--color-primary)
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    top: 22px
+    right: 10px
+    width: 0
+    height: 0
+    border-left: 6px solid transparent
+    border-right: 6px solid transparent
+    border-top: 6px solid var(--color-primary)
+  &.is-disabled
+    &:after
+      border-top: 6px solid var(--color-gray)
+    select:disabled
+      cursor: not-allowed
+      opacity: .5
+
++lightMode()
+  .vh-select select
+    box-shadow: shadows.formItem

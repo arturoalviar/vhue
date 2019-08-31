@@ -1,0 +1,35 @@
+.vh-checkbox
+  position: relative
+  margin-right: 15px
+  margin-bottom: 15px
+  input[type="checkbox"]
+    position: absolute
+    opacity: 0
+    &:checked
+      & + label
+        & svg
+          opacity: 1
+  label
+    cursor: pointer
+    padding-left: 30px
+    position: relative
+    &:before
+      background: var(--color-card)
+      border: 1px solid var(--color-primary)
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      width: 20px
+      height: 20px
+    svg
+      fill: var(--color-primary)
+      position: absolute
+      top: 50%
+      left: 3px
+      margin: 0
+      transform: translateY(-50%)
+      opacity: 0
+      width: 14px
+      height: 14px
+      transition: opacity .3s ease-in-out

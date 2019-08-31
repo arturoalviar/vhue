@@ -1,0 +1,50 @@
+@import '../utils/mixins.styl'
+
+.vh-radio-group
+  display: flex
+
+.vh-radio
+  position: relative
+  &:not(:last-child)
+    margin-right: 15px
+  input[type="radio"]
+    position: absolute
+    opacity: 0
+    &:checked
+      & + label
+        &:after
+          transform: scale(1)
+  label
+    cursor: pointer
+    padding-left: 30px
+    position: relative
+    font-size: remCalc(14)
+    line-height: 1
+    +minMedia(lg)
+      font-size: remCalc(18)
+    &:before
+      background: var(--color-card)
+      border-radius: 50%
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      width: 20px
+      height: 20px
+    &:after
+      background: var(--color-primary)
+      border-radius: 50%
+      content: ''
+      display: block
+      position: absolute
+      top: 5px
+      left: 5px
+      transform: scale(0)
+      width: 10px
+      height: 10px
+      transition: transform .3s ease
+      z-index: 5
+
++lightMode()
+  label:before
+    box-shadow: hsla(colors.primary, .2) 0px 2px 6px

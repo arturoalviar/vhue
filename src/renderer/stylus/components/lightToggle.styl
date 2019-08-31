@@ -1,0 +1,42 @@
+@import '../../stylus/utils/*'
+
+.vh-light-toggle
+  display: inline-flex
+  input
+    display: none
+    &:checked
+      & + label .vh-light-toggle-indicator
+        opacity: 1
+        margin-left: -2px
+        transform: translate3d(100%, 0, 0)
+ .vh-light-toggle-rail
+    border-radius: 14px
+    cursor: pointer
+    display: inline-flex
+    width: 36px
+    height: 20px
+    position: relative
+    +minMedia(lg)
+      width: 42px
+      height: 24px
+.vh-light-toggle-indicator
+  background: var(--color-toggle)
+  border-radius: 50%
+  display: block
+  position: absolute
+  top: 2px
+  left: 2px
+  width: 16px
+  height: 16px
+  opacity: .4
+  transition: all .3s ease-in
+  +minMedia(lg)
+    width: 20px
+    height: @width
+
++lightMode()
+  .vh-light-toggle-rail
+     box-shadow: 0 0 3px var(--color-toggle)
++darkMode()
+  .vh-light-toggle-rail
+    background: var(--color-darkGray)
