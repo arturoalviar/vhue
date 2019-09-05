@@ -1,6 +1,6 @@
 <template>
   <div class="vh-settings-shortcuts">
-    <h3>Keybinds</h3>
+    <h3>Keyboard Shortcuts</h3>
     <div class="vh-item-form-block">
       <div class="vh-item-form-panel">
         <p class="vh-small" v-if="isMacOs">
