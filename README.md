@@ -15,7 +15,13 @@ Once you have connected to your local Hue bridge, you can do the following:
 - Edit lights/rooms attributes
 - Enable global shortcut to toggle user selected lights
 
-#### [Using the big switch to toggle my hue lights (gfycat)](https://giant.gfycat.com/ConsciousUniqueAegeancat.mp4)
+## Keyboard Shortcuts
+For macOs users, you need to grant vhue [accessibility access](https://support.apple.com/guide/mac-help/allow-accessibility-apps-to-access-your-mac-mh43185/mac) (this can be done from the settings page) in order for the shortcut to work.
+
+#### Control/Command + Shift + Alt/Option + P
+This shortcut turns on all lights checked in Settings > Keyboard Shortcuts panel.
+
+Demo: [Using the big switch to toggle my hue lights (gfycat)](https://giant.gfycat.com/ConsciousUniqueAegeancat.mp4)
 
 
 ## Build Setup
@@ -43,7 +49,6 @@ $ npm run lint
 
 ```
 
----
 
 ### License
 [**MIT License**](LICENSE).
