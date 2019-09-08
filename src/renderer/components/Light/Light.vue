@@ -56,6 +56,13 @@
         return Object.prototype.hasOwnProperty.call(state, 'xy');
       },
     },
+    watch: {
+      light: {
+        handler() {
+          this.setLightGradient();
+        },
+      },
+    },
     data() {
       return {
         rgb: null,
